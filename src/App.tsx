@@ -1,11 +1,19 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
 import './App.css';
+import Navigation from './components/Navigation/Navigation';
+import AppRoutes from './components/Navigation/AppRoutes';
+import Footer from './components/Footer/Footer';
+import BlockContainer from './components/BlockContainer/BlockContainer';
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <></>;
+  return (
+    <>
+      <Navigation />
+      <BlockContainer containerType={'main'}>
+        <AppRoutes />
+      </BlockContainer>
+      <Footer />
+    </>
+  );
 }
 
 export default App;
